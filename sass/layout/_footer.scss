@@ -1,0 +1,135 @@
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 10rem 5rem;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+
+  @include respond(phone) {
+    padding: 10rem 3rem;
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include respond(tab-port) {
+      margin-top: -3rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+
+    &--title {
+      display: flex;
+      justify-content: center;
+      margin-top: -3rem;
+      margin-bottom: 4rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    column-gap: 15rem;
+    width: 70%;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      display: block;
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-grey-dark;
+    padding: 2rem;
+    display: inline-block;
+
+    @include respond(phone) {
+      padding: 2rem 0;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include respond(phone) {
+      text-align: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+
+      @include respond(phone) {
+        margin-right: 2.5rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    padding: 1rem;
+    text-decoration: none;
+    &:link,
+    &:visited {
+      color: $color-grey-light-1;
+      background-color: $color-grey-dark-3;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+      transform: scale(1.1);
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-grey-dark;
+    padding: 2rem;
+
+    @include respond(phone) {
+      justify-content: center;
+      margin: 0 auto;
+      width: 60%;
+      margin-top: 5rem;
+      margin-bottom: -6rem;
+    }
+
+    .footer__link {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+}
