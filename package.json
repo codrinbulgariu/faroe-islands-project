@@ -1,7 +1,7 @@
 {
-  "name": "nature-website",
+  "name": "faroe-islands-project",
   "version": "1.0.0",
-  "description": "Nature website",
+  "description": "Faroe Islands Project",
   "default": "index.html",
   "scripts": {
     "build": "parcel build index.html"
